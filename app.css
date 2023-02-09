@@ -7,27 +7,33 @@ body {
   background-color: rgb(196, 190, 184);
   text-align: auto;
 }
-
-.container {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  grid-template-areas:
+    "header header header header"
+    "left middle middle aside";
 }
-.indgredienser {
-  grid-column: 1/2;
-  grid-row: 1;
+header {
+  grid-area: header;
+  text-align: center;
 }
-.fremgangsmåde {
-  grid-column: 2/2;
-  grid-row: 1;
+.left {
+  grid-area: left;
+  background-color: green;
+  width: 25vw;
 }
-
-.oversec {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+.middle {
+  grid-area: middle;
+  background-color: white;
 }
-.container {
-  grid-column: 1/2;
-  grid-row: 1;
+.aside {
+  grid-area: aside;
+  background-color: red;
+  width: 25vw;
+  text-align: center;
+}
+.middle ol,
+h3 {
+  width: 80%;
+  margin: auto;
 }
